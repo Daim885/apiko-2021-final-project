@@ -21,7 +21,7 @@ const ListProduct = () => {
         setTypeMessage("byCategory");
       else setTypeMessage("");
     }
-  }, [products]);
+  }, [products, location.pathname]);
 
   return (
     <>

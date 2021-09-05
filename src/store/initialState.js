@@ -1,4 +1,4 @@
-import { getToken } from "../config/utils/workWithLocalStorage";
+import { getToken, getCartItems } from "../config/utils";
 
 export const initialState = {
   token: getToken(),
@@ -6,4 +6,5 @@ export const initialState = {
   isLoading: true,
   products: [],
   categories: null,
+  cart: getCartItems(),
 };

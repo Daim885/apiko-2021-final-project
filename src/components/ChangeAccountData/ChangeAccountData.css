@@ -1,0 +1,45 @@
+.account-change__text {
+  display: inline-block;
+  font-size: 18px;
+  letter-spacing: 0.15px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.account-change-information-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-change-information-form__button {
+  background: #fd7114;
+  border-radius: 5px;
+  border: none;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  height: 40px;
+  width: 380px;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+}
+
+.account-change-information-form__button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.account-change-information-form__button:hover {
+  opacity: 0.8;
+}
+
+.account-change__text,
+.account-change-information-form__button {
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+}

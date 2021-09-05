@@ -13,7 +13,6 @@ import Preloader from "../Preloader/Preloader";
 import { ReactComponent as ApikoLogo } from "../../icons/Logofull.svg";
 import { ReactComponent as HeartIcon } from "../../icons/icon_heart.svg";
 import { ReactComponent as BasketIcon } from "../../icons/icon_basket.svg";
-import { ReactComponent as Rectangle } from "../../icons/Rectangle_2867.svg";
 
 import "./Headers.css";
 
@@ -40,7 +39,7 @@ const GuestHeader = () => {
 
   useEffect(() => {
     dispatch(fetchCategories());
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (isLoading) return <Preloader />;
 
@@ -75,7 +74,7 @@ const GuestHeader = () => {
               <span className="text-authorization">register</span>
             </button>
 
-            <Rectangle />
+            <div className="rectangle"></div>
 
             <button className="button-authorization" onClick={openLogInWindow}>
               <span className="text-authorization">log in</span>

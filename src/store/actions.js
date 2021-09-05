@@ -6,7 +6,8 @@ import {
   getToken,
   setToken as setTokenToLocalStorage,
   removeToken,
-} from "../config/utils/workWithLocalStorage";
+  refreshSessionStorage,
+} from "../config/utils";
 
 export const setToken = createAction("setToken");
 
@@ -18,6 +19,8 @@ export const setProducts = createAction("setProducts");
 
 export const setCategories = createAction("setCategories");
 
+export const setDataToCart = createAction("setDataToCart");
+
 export const setDataAfterLogIn = (payload) => (dispatch) => {
   setTokenToLocalStorage(payload.token);
   dispatch(setToken(payload.token));
@@ -25,6 +28,7 @@ export const setDataAfterLogIn = (payload) => (dispatch) => {
 };
 
 export const clearState = () => (dispatch) => {
+  Api.logOut();
   removeToken();
   dispatch(setToken(null));
   dispatch(setUserData(null));
@@ -41,6 +45,15 @@ export const fetchUserData = () => (dispatch) => {
     dispatch(setIsLoading(false));
   }
   fetchData();
+};
+
+export const changeUserData = (payload) => (dispatch) => {
+  const changeData = () => {
+    dispatch(setIsLoading(true));
+    dispatch(setUserData(payload));
+    dispatch(setIsLoading(false));
+  };
+  changeData();
 };
 
 export const fetchProductsByUrl = (payload) => (dispatch) => {
@@ -61,4 +74,27 @@ export const fetchCategories = () => (dispatch) => {
     dispatch(setIsLoading(false));
   };
   fetchData();
+};
+
+export const addItemToCart = (payload, cart) => (dispatch) => {
+  const newCart = cart.slice();
+  if (!newCart.find((e) => e.id === payload.id)) {
+    newCart.unshift(payload);
+  } else {
+    newCart.forEach((element, i, arr) => {
+      if (element.id === payload.id) {
+        arr[i] = {
+          ...element,
+          quantity: element.quantity + payload.quantity,
+        };
+      }
+    });
+  }
+  refreshSessionStorage(newCart);
+  dispatch(setDataToCart(newCart));
+};
+
+export const refreshCart = (payload) => (dispatch) => {
+  refreshSessionStorage(payload);
+  dispatch(setDataToCart(payload));
 };

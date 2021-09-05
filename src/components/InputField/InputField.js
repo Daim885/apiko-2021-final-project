@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-import { handlerHelperText } from "../../config/utils/handlerHelperText";
+import { handlerHelperText } from "../../config/utils";
 
 import { ReactComponent as OpenEye } from "../../icons/icon_show_eye.svg";
 import { ReactComponent as CloseEye } from "../../icons/icon_hidden_eye.svg";

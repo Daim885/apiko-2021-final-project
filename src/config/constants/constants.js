@@ -4,3 +4,12 @@ export const passwordHelperText =
 export const amountGetProducts = 12;
 
 export const fetchProductUrl = `/products?offset=0&limit=${amountGetProducts}`;
+
+export const fetchFavouriteProductUrl = `/favorites?offset=0&limit=${amountGetProducts}`;
+
+export const fetchOrderHistoryUrl = `/orders?offset=0&limit=${amountGetProducts}`;
+
+export const messageChangeAccountData =
+  "Account details are updated successfully";
+
+export const messageChangePassword = "Your password is updated successfully";

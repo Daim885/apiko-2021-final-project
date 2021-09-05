@@ -1,0 +1,119 @@
+.cart-item {
+  width: 560px;
+  height: 160px;
+  background: #ffffff;
+  border: 1px solid #eceef0;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 14px rgba(121, 121, 121, 0.0527344);
+  border-radius: 4px;
+  margin-bottom: 23px;
+  padding: 18px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item-data {
+  height: 122px;
+  display: flex;
+}
+
+.cart-item-img {
+  height: 122px;
+  width: 125px;
+  background: #e0e0e0;
+  border-radius: 3px;
+}
+
+.cart-item-img__img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.cart-item-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.cart-item__name {
+  max-height: 75px;
+  max-width: 260px;
+  overflow-y: auto;
+}
+
+.cart-buttons {
+  display: flex;
+
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cart-item-button-tresh {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.cart-item-count-button {
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  border: none;
+  background: #e0e0e0;
+  cursor: pointer;
+  font-size: 21px;
+  color: #707070;
+}
+
+.cart-item-count-button:disabled {
+  background: #f0f0f0;
+}
+
+.cart-item-amount {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  color: #000000;
+  border-radius: 50%;
+  border: none;
+  margin: 0 10px;
+}
+
+.cart-item-price {
+  width: 120px;
+  height: 130px;
+  border-left: 1px solid #eceef0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item-price__text {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  color: #373738;
+}
+
+.cart-item-price__price {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+  color: #373738;
+}
+
+.cart-item-price__text,
+.cart-item-price__price {
+  font-family: Heebo;
+  font-style: normal;
+}

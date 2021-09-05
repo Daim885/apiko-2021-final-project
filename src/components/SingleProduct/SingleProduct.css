@@ -98,6 +98,7 @@
   background: #e0e0e0;
   cursor: pointer;
   font-size: 21px;
+  color: #707070;
 }
 
 .item-description-count-button:disabled {
