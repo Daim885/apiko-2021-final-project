@@ -1,6 +1,9 @@
 {
   "name": "final-project",
   "version": "0.1.0",
+  "engines": {
+    "yarn": "1.22.10"
+  },
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^2.7.1",
