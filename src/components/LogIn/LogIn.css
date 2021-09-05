@@ -1,0 +1,101 @@
+.login-wrapper {
+  width: 425px;
+  height: 456px;
+}
+
+.login-block {
+  height: 365px;
+}
+
+.login-block form {
+  display: flex;
+  flex-direction: column;
+  height: 223px;
+}
+
+.login-close-window {
+  display: block;
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  margin: 0 22px auto auto;
+  padding-top: 22px;
+}
+
+.login-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+  font-size: 22px;
+  line-height: 32px;
+  color: #101010;
+}
+
+.login-fields {
+  flex: 1 1 auto;
+  width: 362px;
+  margin: 0 auto;
+  color: #707070;
+}
+
+.login-fields div {
+  margin: 20px 0;
+}
+
+.login-button {
+  height: 36px;
+  width: 362px;
+  display: block;
+  margin: 0 auto;
+  padding: 6px 16px;
+  color: #ffffff;
+  background: #fd7114;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.go-to-register-block {
+  box-sizing: border-box;
+  margin-top: 15px;
+  height: 76px;
+  padding-top: 30px;
+}
+
+.go-to-register-block__content {
+  display: flex;
+  justify-content: center;
+}
+
+.go-to-register-block__text {
+  color: #373738;
+}
+
+.button-go-to-register {
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #fd7114;
+}
+
+.login-block,
+.go-to-register-block {
+  background: #ffffff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.go-to-register-block__text,
+.button-go-to-register {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.login-title,
+.go-to-register-block__text,
+.button-go-to-register {
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+}

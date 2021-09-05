@@ -1,0 +1,69 @@
+.list-item__container {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 14px rgba(121, 121, 121, 0.0527344);
+  border-radius: 4px;
+  padding: 4px;
+  position: relative;
+}
+
+.list-item__like {
+  background: #ffffff;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.163407);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  top: 136px;
+  left: 171px;
+}
+
+.list-item__like-ikon {
+  cursor: pointer;
+  fill: #fff;
+}
+
+.list-item__like-ikon :hover {
+  fill: #707070;
+}
+
+.list-item__img {
+  height: 147px;
+  width: 201px;
+  filter: brightness(0.95);
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.list-item-descritiop {
+  margin: 6px 12px 0 12px;
+}
+
+.list-item__title {
+  display: block;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  color: #373738;
+  overflow-y: auto;
+  height: 22px;
+  cursor: pointer;
+}
+
+.list-item__price {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+  color: #373738;
+}
+.list-item__title,
+.list-item__price {
+  font-family: Heebo;
+  font-style: normal;
+}

@@ -1,0 +1,12 @@
+.guest-layout {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  width: 860px;
+  margin: 0 auto;
+  margin-top: 96px;
+  flex: 1 1 auto;
+}

@@ -1,0 +1,85 @@
+.select-auth-wrapper {
+  width: 425px;
+  height: 397px;
+  background-color: #fff;
+}
+
+.select-auth-close-window {
+  display: block;
+  padding-top: 32px;
+  margin: 0 32px auto auto;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+}
+
+.select-auth__title {
+  width: 216px;
+  margin: 29px auto 32px auto;
+  text-align: center;
+  font-size: 25px;
+  line-height: 35px;
+  letter-spacing: 0.4px;
+  color: #373738;
+}
+
+.buttons-container {
+  width: 220px;
+  height: 158px;
+  margin: 0 auto;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-continue-auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 16px;
+  background: #fd7114;
+  border: none;
+  border-radius: 4px;
+}
+
+.button-continue-auth:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.button-continue-auth span {
+  color: #ffffff;
+}
+
+.button-continue-guest {
+  padding: 5px 16px;
+  border: 1px solid #fd7114;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.button-continue-guest:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.button-continue-guest span {
+  color: #fd7114;
+}
+
+.button-continue-auth span,
+.button-continue-guest span {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  margin: 0px 10px;
+}
+
+.select-auth__title,
+.button-continue-auth span,
+.button-continue-guest span {
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+}

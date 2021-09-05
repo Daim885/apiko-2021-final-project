@@ -1,0 +1,212 @@
+/*  Common styles */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 76px;
+  background-color: #110f21;
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 999;
+}
+
+.header-wrapper {
+  width: 1118px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  margin: 15.2px 0;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+}
+
+.header__icons :first-child {
+  margin-right: 17.5px;
+}
+
+.header__icons :last-child {
+  margin-left: 17.5px;
+  margin-right: 42px;
+}
+
+.header__icon {
+  cursor: pointer;
+}
+
+.authorization {
+  display: flex;
+  align-items: center;
+}
+
+/* Guest header */
+
+.button-authorization {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+}
+
+.button-authorization:hover {
+  cursor: pointer;
+}
+
+.button-authorization:first-child {
+  margin-right: 15px;
+}
+
+.button-authorization:last-child {
+  margin-left: 15px;
+}
+
+.text-authorization {
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+/* Client header */
+
+.client {
+  position: relative;
+}
+
+.greeting {
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: right;
+  color: #ffffff;
+}
+
+.circle-auth {
+  background: #dedee0;
+  border: 2px solid #fd7114;
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: 15px;
+  margin-right: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-auth__text {
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+  color: #110f21;
+}
+
+.arrow-open-popup {
+  cursor: pointer;
+}
+
+.popup-background {
+  position: absolute;
+  width: 234px;
+  height: 160px;
+  top: 25px;
+  right: 5px;
+  display: none;
+  padding-top: 33px;
+}
+
+.popup-menu {
+  width: 234px;
+  height: min-content;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.popup-background:hover {
+  display: block;
+}
+
+.arrow-open-popup:hover + .popup-background {
+  display: block;
+}
+
+.popup-menu__user-info {
+  padding: 17px 0 17px 16px;
+}
+
+.popup-menu__fullName {
+  font-weight: normal;
+  color: #373738;
+}
+
+.popup-menu__email {
+  font-weight: 300;
+  color: #707070;
+}
+
+.popup-menu__fullName,
+.popup-menu__email {
+  font-family: Heebo;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 19px;
+
+  letter-spacing: 0.4px;
+  display: block;
+}
+
+.line {
+  width: 100%;
+  height: 0px;
+  border: 1px solid #e4e4e4;
+}
+
+.popup-menu__actions {
+  padding: 11px 0 10px 16px;
+}
+
+.popup-menu__link-settings {
+  color: #373738;
+  text-decoration: none;
+  display: block;
+}
+
+.popup-menu__log-out {
+  margin-top: 14px;
+  cursor: pointer;
+  color: #f44336;
+}
+
+.popup-menu__link-settings,
+.popup-menu__log-out {
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+}

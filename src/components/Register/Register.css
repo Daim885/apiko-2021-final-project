@@ -1,0 +1,110 @@
+.register-wrapper {
+  width: 425px;
+  height: 657px;
+}
+
+.register-block {
+  min-height: 466px;
+  max-height: 566px;
+  background: #ffffff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.register-close-window {
+  display: block;
+  padding-top: 21px;
+  margin: 0 21px auto auto;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+}
+
+.register-title {
+  font-size: 22px;
+  line-height: 32px;
+  color: #373738;
+  margin: 1px 171px 38px 173px;
+}
+
+.register-fields {
+  display: flex;
+  flex-direction: column;
+  width: 362px;
+  margin: 0 auto;
+  color: #707070;
+}
+
+.register-fields div {
+  margin: 10px 0;
+}
+
+.register-button {
+  box-sizing: border-box;
+  width: 362px;
+  height: 36px;
+  background: #fd7114;
+  border: none;
+  border-radius: 4px;
+  letter-spacing: 0.4px;
+  margin: 50px 33px 40px 30px;
+  color: #ffffff;
+  cursor: pointer;
+  line-height: 24px;
+}
+
+.register-button:hover {
+  opacity: 0.8;
+}
+
+.disabled-button-form {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.go-to-login-block {
+  box-sizing: border-box;
+  margin-top: 15px;
+  height: 76px;
+  background-color: #fff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.go-to-login-block__content {
+  display: flex;
+  justify-content: center;
+}
+
+.go-to-login-block__text {
+  color: #373738;
+}
+
+.button-go-to-login {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #fd7114;
+}
+
+.register-title,
+.register-button,
+.go-to-login-block__text,
+.button-go-to-login {
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.register-button,
+.go-to-login-block__text,
+.button-go-to-login {
+  font-size: 14px;
+}
+
+.go-to-login-block__text,
+.button-go-to-login {
+  line-height: 26px;
+}
