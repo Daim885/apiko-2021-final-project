@@ -1,0 +1,35 @@
+.input-order {
+  box-sizing: border-box;
+  margin-top: 25px;
+  padding-left: 13px;
+  width: 220px;
+  height: 40px;
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.15px;
+  color: #373738;
+  border: 1px solid #dedee0;
+  border-radius: 4px;
+}
+
+.input-order:first-child {
+  margin-top: 0;
+}
+
+.cart-form-field-error {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.4px;
+  color: #f44336;
+  margin: 5px;
+}

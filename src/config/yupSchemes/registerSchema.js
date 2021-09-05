@@ -1,11 +1,6 @@
 import * as yup from "yup";
 
-import {
-  regFullName,
-  regEmail,
-  regPhone,
-  regPassword,
-} from "../constants/regExpPatterns/RegExpPatterns";
+import { regFullName, regEmail, regPhone, regPassword } from "../constants";
 
 export const registerSchema = yup.object().shape({
   fullName: yup.string().required().matches(regFullName, "Incorrect data"),

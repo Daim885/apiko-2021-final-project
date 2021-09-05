@@ -6,6 +6,7 @@ import {
   setIsLoading,
   setProducts,
   setCategories,
+  setDataToCart,
 } from "./actions";
 
 export const changeStoreReducer = createReducer(initialState, {
@@ -23,5 +24,8 @@ export const changeStoreReducer = createReducer(initialState, {
   },
   [setCategories]: (state, actions) => {
     state.categories = actions.payload;
+  },
+  [setDataToCart]: (state, actions) => {
+    state.cart = actions.payload;
   },
 });

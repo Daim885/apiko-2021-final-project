@@ -1,6 +1,6 @@
 export const getToken = () => {
   const tokenStorage = window.localStorage.getItem("token");
-  if (tokenStorage === null) return null;
+  if (!tokenStorage) return null;
   return JSON.parse(tokenStorage);
 };
 

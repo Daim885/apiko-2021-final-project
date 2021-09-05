@@ -36,6 +36,10 @@ class Api {
     return response;
   };
 
+  logOut = () => {
+    this.headers.Authorization = null;
+  };
+
   fetchUserData = async (token) => {
     if (!!token) this.headers.Authorization = `Bearer ${token}`;
     try {
@@ -50,7 +54,9 @@ class Api {
   };
 
   fetchProductsByUrl = async (url) => {
-    const fetchUrl = `/api${url}`;
+    let fetchUrl;
+    if (url.startsWith("/favorites")) fetchUrl = `/api/products${url}`;
+    else fetchUrl = `/api${url}`;
     const headers = {
       method: "GET",
       headers: this.headers,
@@ -71,6 +77,34 @@ class Api {
     return data;
   };
 
+  addProductToFavorite = async (id) => {
+    try {
+      await fetch(`/api/products/${id}/favorite`, {
+        method: "POST",
+        headers: this.headers,
+        body: JSON.stringify({
+          id: id,
+        }),
+      });
+    } catch (e) {
+      console.log(`Error in addProductToFavorite: ${e}`);
+    }
+  };
+
+  removeProductFromFavorite = async (id) => {
+    try {
+      await fetch(`/api/products/${id}/favorite`, {
+        method: "DELETE",
+        headers: this.headers,
+        body: JSON.stringify({
+          id: id,
+        }),
+      });
+    } catch (e) {
+      console.log(`Error in removeProductFromFavorite: ${e}`);
+    }
+  };
+
   async getCountries() {
     try {
       const response = await fetch("/api/locations/countries", {
@@ -81,10 +115,40 @@ class Api {
       if (!response.ok)
         throw new Error(`Failed with status code: ${response.status}`);
       const data = await response.json();
-      console.log(data);
+      return data;
     } catch (e) {
       console.log(`Error in getCountries: ${e}`);
     }
+  }
+
+  async createOrder(orderData) {
+    try {
+      await fetch("/api/orders", {
+        method: "POST",
+        headers: this.headers,
+        body: JSON.stringify(orderData),
+      });
+    } catch (e) {
+      console.log(`Error in createOrder: ${e}`);
+    }
+  }
+  async changeAccountData(data) {
+    const response = await fetch("/api/account", {
+      method: "PUT",
+      headers: this.headers,
+      body: JSON.stringify(data),
+    });
+    return response;
+  }
+
+  async changeAccountPassword(data) {
+    console.log(data);
+    const response = await fetch("/api/account/password", {
+      method: "PUT",
+      headers: this.headers,
+      body: JSON.stringify(data),
+    });
+    return response;
   }
 }
 

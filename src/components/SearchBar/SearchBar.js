@@ -8,8 +8,8 @@ import { categoriesSelector } from "../../store";
 import {
   amountGetProducts,
   fetchProductUrl,
-} from "../../config/constants/constants";
-import { regSortBy } from "../../config/constants/regExpPatterns/RegExpPatterns";
+  regSortBy,
+} from "../../config/constants";
 
 import { ReactComponent as SearchIcon } from "../../icons/icon_search.svg";
 import { ReactComponent as NavBarIcon } from "../../icons/icon_navbar.svg";
@@ -87,7 +87,7 @@ const SearchBar = () => {
       setIdCategory(idCategoryFromUrl);
     if (location.search.includes("&sortBy="))
       setValueSorting(location.search.match(/=\w{6,7}/)[0].replace("=", ""));
-  }, [location]);
+  }, [location, idCategoryFromUrl]);
 
   return (
     <div className="searchbar">

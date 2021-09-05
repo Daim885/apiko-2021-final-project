@@ -1,0 +1,92 @@
+.profile-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-avatar {
+  height: 88px;
+  width: 88px;
+  border-radius: 50%;
+  margin: 49px 0 21px 0;
+  background-color: #dedee0;
+}
+
+.profile-avatar__initials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 24px;
+  line-height: 26px;
+  color: #101010;
+}
+
+.user-name {
+  font-size: 22px;
+  line-height: 32px;
+  text-align: center;
+  color: #101010;
+}
+
+.navigation {
+  margin-top: 22px;
+  margin-bottom: 54px;
+  display: flex;
+}
+
+.nav-rectangle {
+  box-sizing: border-box;
+  height: 74px;
+  width: 163px;
+  border: 1.3px solid #dedee0;
+  cursor: pointer;
+}
+
+.nav-rectangle__active {
+  background: #fd7114;
+  position: relative;
+}
+
+.nav-rectangle__treangle {
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  margin-left: -8px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #dedee0;
+}
+
+.nav-rectangle__border-treangle {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  margin-left: -8px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fd7114;
+}
+
+.navigation__text {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  color: #373738;
+}
+
+.navigation__text-active {
+  color: #ffffff;
+}
+
+.profile-avatar__initials,
+.user-name,
+.navigation__text {
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+}

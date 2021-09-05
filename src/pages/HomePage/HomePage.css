@@ -1,25 +1,3 @@
 .content {
   height: 100%;
 }
-
-.button-load-more {
-  width: 150px;
-  height: 36px;
-  display: block;
-  margin: 50px auto 85px auto;
-  padding: 6px 16px;
-  border: none;
-  background: #148dfd;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.button-load-more__name {
-  font-family: Heebo;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.4px;
-  color: #ffffff;
-}

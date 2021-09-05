@@ -13,7 +13,7 @@ import "./PageWrapperLayout.css";
 const PageWrapperLayout = ({ children }) => {
   const isToken = !!useSelector(tokenSelector);
   return (
-    <div className="guest-layout">
+    <div className="default-layout">
       {isToken ? <ClientHeader /> : <GuestHeader />}
       <main className="main">{children}</main>
       <Footer />

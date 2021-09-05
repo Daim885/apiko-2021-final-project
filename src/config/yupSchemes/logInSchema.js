@@ -1,9 +1,6 @@
 import * as yup from "yup";
 
-import {
-  regEmail,
-  regPassword,
-} from "../constants/regExpPatterns/RegExpPatterns";
+import { regEmail, regPassword } from "../constants";
 
 export const logInSchema = yup.object().shape({
   email: yup.string().required().email().matches(regEmail, "Incorrect data"),

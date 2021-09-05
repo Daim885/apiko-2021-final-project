@@ -1,0 +1,130 @@
+.cart {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-title {
+  margin: 69px auto 32px 39px;
+  font-size: 25px;
+  line-height: 37px;
+  letter-spacing: 0.4px;
+  color: #000000;
+}
+
+.cart-list {
+  margin-left: 37px;
+}
+
+.cart-message-no-items {
+  display: block;
+  width: 100%;
+  margin-left: 25%;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  color: #f44336;
+}
+
+.cart-form {
+  box-sizing: border-box;
+  width: 300px;
+  border-left: 1px solid #dedee0;
+  padding-left: 46px;
+  height: 526px;
+}
+
+.cart-totally {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  margin-top: 33px;
+}
+
+.cart-totally__name {
+  display: block;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.4px;
+  color: #707070;
+}
+
+.cart-totally__name:first-child {
+  margin-bottom: 4px;
+}
+
+.cart-totally__name:last-child {
+  margin-top: 4px;
+}
+
+.cart-totally__value {
+  display: block;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.4px;
+  color: #373738;
+}
+
+.cart-totally__value:first-child {
+  margin-bottom: 4px;
+}
+
+.cart-totally__value:last-child {
+  margin-top: 4px;
+}
+
+.cart-button-wrapper {
+  width: 220px;
+  height: 36px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button__text-wrapper {
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.4px;
+}
+
+.cart-form-button-submit {
+  background: #fd7114;
+  border: none;
+  box-sizing: border-box;
+  margin-top: 47px;
+}
+
+.cart-form-button-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.cart-form-button-submit__text {
+  color: #ffffff;
+}
+
+.cart-form-button-continue {
+  background: #ffffff;
+  box-sizing: border-box;
+  border: 1px solid #fd7114;
+  box-shadow: 0px 5px 15px rgba(121, 121, 121, 0.0527344);
+  margin-top: 18px;
+}
+
+.cart-form-button-continue__text {
+  color: #fd7114;
+}
+
+.cart-title,
+.cart-message-no-items,
+.cart-totally__name,
+.cart-totally__value,
+.cart-form-button-submit__text,
+.cart-form-button-continue__text {
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+}

@@ -2,6 +2,8 @@
   background: #ffffff;
   border: 1px solid #e0e0e0;
   box-sizing: border-box;
+  width: 209px;
+  height: 212px;
   box-shadow: 0px 4px 14px rgba(121, 121, 121, 0.0527344);
   border-radius: 4px;
   padding: 4px;
@@ -26,10 +28,17 @@
 .list-item__like-ikon {
   cursor: pointer;
   fill: #fff;
+  stroke: #707070;
 }
 
 .list-item__like-ikon :hover {
-  fill: #707070;
+  fill: #e0e0e0;
+  stroke: #e0e0e0;
+}
+
+.isFavorite__icon {
+  fill: #fd7114;
+  stroke: #fd7114;
 }
 
 .list-item__img {

@@ -8,7 +8,10 @@ import {
   fetchUserData,
   userDataSelector,
   isLoadingSelector,
+  cartSelector,
 } from "../../store";
+
+import { initialsUser } from "../../config/utils";
 
 import Preloader from "../Preloader/Preloader";
 
@@ -22,20 +25,21 @@ import "./Headers.css";
 const ClientHeader = () => {
   const userData = useSelector(userDataSelector);
   const isLoadint = useSelector(isLoadingSelector);
+  const amountCartItems = useSelector(cartSelector).reduce(
+    (acc, e) => acc + e.quantity,
+    0
+  );
   const dispatch = useDispatch();
   const history = useHistory();
 
   useEffect(() => {
     dispatch(fetchUserData());
     dispatch(fetchCategories());
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fullName = userData?.fullName;
   const greeting = `Welcome, ${fullName?.slice(fullName.lastIndexOf(" "))}!`;
-  const initials = fullName
-    ?.split(" ")
-    .map((word) => word[0])
-    .join("");
+  const initials = initialsUser(fullName);
 
   const logOut = () => {
     dispatch(clearState());
@@ -55,8 +59,26 @@ const ClientHeader = () => {
 
         <div className="header-content">
           <div className="header__icons">
-            <HeartIcon fill="#ffffff" className="header__icon" />
-            <BasketIcon fill="#ffffff" className="header__icon" />
+            <HeartIcon
+              fill="#ffffff"
+              className="header__icon"
+              onClick={() => history.push("/favorites")}
+            />
+            <div className="cart__icon">
+              <BasketIcon
+                fill="#ffffff"
+                className="header__icon"
+                onClick={() => history.push("/cart")}
+              />
+              {amountCartItems !== 0 && (
+                <div
+                  className="circle-cart-items"
+                  onClick={() => history.push("/cart")}
+                >
+                  {amountCartItems}
+                </div>
+              )}
+            </div>
           </div>
           <div className="authorization client">
             <span className="greeting">{greeting}</span>
@@ -74,10 +96,7 @@ const ClientHeader = () => {
                 </div>
                 <div className="line" />
                 <div className="popup-menu__actions">
-                  <Link
-                    to="/edit_account"
-                    className="popup-menu__link-settings"
-                  >
+                  <Link to="/settings" className="popup-menu__link-settings">
                     Settings
                   </Link>
                   <span className="popup-menu__log-out" onClick={logOut}>
