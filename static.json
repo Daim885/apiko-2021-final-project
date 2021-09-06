@@ -5,7 +5,7 @@
     },
     "proxies": {
       "/api/": {
-        "origin": "https://apiko-2021-spring-course-api.herokuapp.com"
+        "origin": "https://apiko-2021-spring-course-api.herokuapp.com/api"
       }
     }
   }
