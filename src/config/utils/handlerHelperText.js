@@ -1,4 +1,4 @@
-export const handlerHelperText = (name, errors, refInput, helperText) => {
+export const handlerHelperText = (name, errors, helperText) => {
   const typeError = errors[name]?.type;
   switch (typeError) {
     case "required":
@@ -18,9 +18,7 @@ export const handlerHelperText = (name, errors, refInput, helperText) => {
     case "oneOf":
       return "Passwords don’t match";
     default: {
-      if (!refInput?.current?.value) {
-        return helperText;
-      }
+      return helperText;
     }
   }
 };
