@@ -4,14 +4,13 @@ import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-import InputField from "../InputField/InputField";
-
-import Api from "../../classApi/classApi";
-
 import { registerSchema } from "../../config/yupSchemes";
+import Api from "../../classApi/classApi";
 import { passwordHelperText } from "../../config/constants/constants";
-
 import { setDataAfterLogIn } from "../../store";
+
+import InputOrderForm from "../InputOrderForm/InputOrderForm";
+import InputField from "../InputField/InputField";
 
 import { ReactComponent as CloseIcon } from "../../icons/icon_close.svg";
 
@@ -32,6 +31,8 @@ const Register = (props) => {
     mode: "onChange",
     resolver: yupResolver(registerSchema),
   });
+
+  const inputStyle = { width: 362 };
 
   const onSubmit = async (data) => {
     try {
@@ -68,34 +69,46 @@ const Register = (props) => {
         <div className="register-title">Register</div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="register-fields">
-            <InputField
+            <InputOrderForm
               register={register}
               type="text"
               name="fullName"
               placeholder="Full Name"
               errors={errors}
+              style={inputStyle}
             />
-            <InputField
+            {/* register={register}
+              type="password"
+              name="password"
+              placeholder="Password"
+              errors={errors}
+              clearErrors={clearErrors}
+              helperText={passwordHelperText}
+              style={{ width: 362, marginTop: 25 }} */}
+            <InputOrderForm
               register={register}
               type="email"
               name="email"
               placeholder="Email"
               errors={errors}
+              style={inputStyle}
             />
-            <InputField
+            <InputOrderForm
               register={register}
               type="tel"
               name="phone"
               placeholder="Phone number"
               errors={errors}
+              style={inputStyle}
             />
-            <InputField
+            <InputOrderForm
               register={register}
               type="password"
               name="password"
               placeholder="Password"
               errors={errors}
               helperText={passwordHelperText}
+              style={inputStyle}
             />
           </div>
           <button

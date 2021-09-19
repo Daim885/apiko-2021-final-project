@@ -36,7 +36,7 @@ const InputOrderForm = (props) => {
   };
 
   return (
-    <>
+    <div>
       <label className="input-label">
         <input
           {...customRegister}
@@ -65,7 +65,7 @@ const InputOrderForm = (props) => {
           {handlerHelperText(name, errors, helperText)}
         </span>
       )}
-    </>
+    </div>
   );
 };
 
