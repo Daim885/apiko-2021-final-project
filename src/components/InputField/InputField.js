@@ -42,7 +42,7 @@ const InputField = (props) => {
       </label>
       {(errors[name] || helperText) && (
         <span className={errors[name] ? "helperText wrongText" : "helperText"}>
-          {handlerHelperText(name, errors, refInput, helperText)}
+          {handlerHelperText(name, errors, helperText)}
         </span>
       )}
     </div>

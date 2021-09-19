@@ -35,7 +35,7 @@ const Pagination = () => {
     <>
       {!(amountProducts < amountGetProducts) && !!amountProducts && (
         <button onClick={handlerLoadMore} className="button-load-more">
-          <span className="button-load-more__name">load More</span>
+          <span className="button-load-more__name">Load More</span>
         </button>
       )}
     </>

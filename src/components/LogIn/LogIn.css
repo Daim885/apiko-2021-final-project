@@ -38,10 +38,6 @@
   color: #707070;
 }
 
-.login-fields div {
-  margin: 20px 0;
-}
-
 .login-button {
   height: 36px;
   width: 362px;
@@ -53,6 +49,11 @@
   border-radius: 4px;
   border: none;
   cursor: pointer;
+}
+
+.disabled-button-form {
+  cursor: not-allowed;
+  opacity: 0.8;
 }
 
 .go-to-register-block {
