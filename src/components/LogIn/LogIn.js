@@ -2,15 +2,14 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-
 import { yupResolver } from "@hookform/resolvers/yup";
+
 import { logInSchema } from "../../config/yupSchemes";
-
 import Api from "../../classApi/classApi";
-
-import InputField from "../InputField/InputField";
-
 import { setDataAfterLogIn } from "../../store";
+import { passwordHelperText } from "../../config/constants";
+
+import InputOrderForm from "../InputOrderForm/InputOrderForm";
 
 import { ReactComponent as CloseIcon } from "../../icons/icon_close.svg";
 
@@ -25,8 +24,12 @@ const LogIn = (props) => {
     register,
     handleSubmit,
     setError,
+    clearErrors,
     formState: { errors },
-  } = useForm({ resolver: yupResolver(logInSchema) });
+  } = useForm({
+    resolver: yupResolver(logInSchema),
+    shouldFocusError: true,
+  });
 
   const onSubmit = async (data) => {
     try {
@@ -51,9 +54,10 @@ const LogIn = (props) => {
         }
       }
     } catch (e) {
-      console.log(`Error in logIn ${e}`);
+      console.log(`Error in logIn. ${e}`);
     }
   };
+
   return (
     <div className="login-wrapper">
       <div className="login-block">
@@ -66,19 +70,24 @@ const LogIn = (props) => {
         <div className="login-title">Login</div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="login-fields">
-            <InputField
+            <InputOrderForm
               register={register}
               type="email"
               name="email"
               placeholder="Email"
               errors={errors}
+              clearErrors={clearErrors}
+              style={{ width: 362 }}
             />
-            <InputField
+            <InputOrderForm
               register={register}
               type="password"
               name="password"
               placeholder="Password"
               errors={errors}
+              clearErrors={clearErrors}
+              helperText={passwordHelperText}
+              style={{ width: 362, marginTop: 25 }}
             />
           </div>
           <button
