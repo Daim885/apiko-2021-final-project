@@ -43,7 +43,7 @@ const ChangeAccountDataForm = () => {
       const response = await Api.changeAccountData(data);
       if (response.ok) {
         const data = await response.json();
-        if (userData.fullName !== data.fullName) {
+        if (response.status === 200) {
           dispatch(changeUserData(data));
         }
         setShowMessage(true);
