@@ -34,6 +34,24 @@
   height: 526px;
 }
 
+.select-field-order {
+  box-sizing: border-box;
+  padding-left: 13px;
+  width: 220px;
+  height: 40px;
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.15px;
+  color: #373738;
+  border: 1px solid #dedee0;
+  border-radius: 4px;
+}
+
 .cart-totally {
   display: flex;
   justify-content: space-between;

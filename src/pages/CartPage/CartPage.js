@@ -26,11 +26,13 @@ const CartPage = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isDirty, isValid },
+    formState: { errors, isValid },
   } = useForm({
     mode: "onChange",
     resolver: yupResolver(orderSchema),
   });
+
+  const inputStyle = { marginBottom: 25 };
 
   const onSubmit = (shipment) => {
     const items = cart.map((item) => {
@@ -99,17 +101,20 @@ const CartPage = () => {
             name="fullName"
             placeholder="Full Name"
             errors={errors}
+            style={inputStyle}
           />
           <InputOrderForm
             register={register}
             name="phone"
             placeholder="Phone"
             errors={errors}
+            style={inputStyle}
           />
           <select
             {...register("country")}
-            value={userData.country}
-            className="input-order"
+            value={userData?.country}
+            className="select-field-order"
+            style={inputStyle}
           >
             <option hidden value="">
               Choose Country
@@ -125,12 +130,14 @@ const CartPage = () => {
             name="city"
             placeholder="City"
             errors={errors}
+            style={inputStyle}
           />
           <InputOrderForm
             register={register}
             name="address"
             placeholder="Address"
             errors={errors}
+            style={inputStyle}
           />
           <div className="cart-totally">
             <div>
@@ -148,7 +155,7 @@ const CartPage = () => {
           </div>
           <button
             type="submit"
-            disabled={!isDirty || !isValid || !cart.length}
+            disabled={!isValid || !cart.length}
             className="cart-form-button-submit cart-button-wrapper"
           >
             <span className="button__text-wrapper cart-form-button-submit__text">
