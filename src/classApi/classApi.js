@@ -142,7 +142,6 @@ class Api {
   }
 
   async changeAccountPassword(data) {
-    console.log(data);
     const response = await fetch("/api/account/password", {
       method: "PUT",
       headers: this.headers,

@@ -3,7 +3,7 @@ import * as yup from "yup";
 import { regPassword } from "../constants";
 
 export const changeAccountPasswordSchema = yup.object().shape({
-  password: yup.string().required().matches(regPassword, "Incorrect data"),
+  oldPassword: yup.string().required(),
   newPassword: yup.string().required().matches(regPassword, "Incorrect data"),
   newPasswordConfirm: yup
     .string()

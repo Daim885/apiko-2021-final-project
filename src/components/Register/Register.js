@@ -10,7 +10,6 @@ import { passwordHelperText } from "../../config/constants/constants";
 import { setDataAfterLogIn } from "../../store";
 
 import InputOrderForm from "../InputOrderForm/InputOrderForm";
-import InputField from "../InputField/InputField";
 
 import { ReactComponent as CloseIcon } from "../../icons/icon_close.svg";
 

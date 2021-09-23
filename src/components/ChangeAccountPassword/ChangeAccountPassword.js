@@ -26,7 +26,7 @@ const ChangeAccountPassword = () => {
 
   const onSubmit = async (data) => {
     const changePasswordData = {
-      oldPassword: data.password,
+      oldPassword: data.oldPassword,
       password: data.newPassword,
     };
     try {
@@ -35,7 +35,7 @@ const ChangeAccountPassword = () => {
         setShowMessage(true);
         reset();
       } else if (response.status === 401) {
-        setError("password", {
+        setError("oldPassword", {
           type: "WRONG_PASSWORD",
           message: "WRONG_PASSWORD",
         });
@@ -62,7 +62,7 @@ const ChangeAccountPassword = () => {
       >
         <InputOrderForm
           register={register}
-          name="password"
+          name="oldPassword"
           type="password"
           placeholder="Current password"
           errors={errors}
