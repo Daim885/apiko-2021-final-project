@@ -7,7 +7,7 @@ import { changeAccountPasswordSchema } from "../../config/yupSchemes";
 import { messageChangePassword } from "../../config/constants";
 
 import MessageAddItemToCart from "../MessageAddItemToCart/MessageAddItemToCart";
-import InputOrderForm from "../InputOrderForm/InputOrderForm";
+import CustomInput from "../CustomInput/CustomInput";
 
 import "./ChangeAccountPassword.css";
 
@@ -60,7 +60,7 @@ const ChangeAccountPassword = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="account-change-password-form"
       >
-        <InputOrderForm
+        <CustomInput
           register={register}
           name="oldPassword"
           type="password"
@@ -68,7 +68,7 @@ const ChangeAccountPassword = () => {
           errors={errors}
           style={inputStyle}
         />
-        <InputOrderForm
+        <CustomInput
           register={register}
           name="newPassword"
           type="password"
@@ -76,7 +76,7 @@ const ChangeAccountPassword = () => {
           errors={errors}
           style={inputStyle}
         />
-        <InputOrderForm
+        <CustomInput
           register={register}
           name="newPasswordConfirm"
           type="password"

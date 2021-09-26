@@ -9,7 +9,7 @@ import { changeAccountDataSchema } from "../../config/yupSchemes";
 import { messageChangeAccountData } from "../../config/constants";
 
 import MessageAddItemToCart from "../MessageAddItemToCart/MessageAddItemToCart";
-import InputOrderForm from "../InputOrderForm/InputOrderForm";
+import CustomInput from "../CustomInput/CustomInput";
 
 import "./ChangeAccountData.css";
 
@@ -76,7 +76,7 @@ const ChangeAccountDataForm = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="account-change-information-form"
       >
-        <InputOrderForm
+        <CustomInput
           register={register}
           type="text"
           name="fullName"
@@ -84,7 +84,7 @@ const ChangeAccountDataForm = () => {
           errors={errors}
           style={inputStyle}
         />
-        <InputOrderForm
+        <CustomInput
           register={register}
           type="email"
           name="email"
@@ -92,7 +92,7 @@ const ChangeAccountDataForm = () => {
           errors={errors}
           style={inputStyle}
         />
-        <InputOrderForm
+        <CustomInput
           register={register}
           type="tel"
           name="phone"
@@ -100,7 +100,7 @@ const ChangeAccountDataForm = () => {
           errors={errors}
           style={inputStyle}
         />
-        <InputOrderForm
+        <CustomInput
           register={register}
           type="text"
           name="country"
@@ -108,7 +108,7 @@ const ChangeAccountDataForm = () => {
           errors={errors}
           style={inputStyle}
         />
-        <InputOrderForm
+        <CustomInput
           register={register}
           type="text"
           name="city"
@@ -116,7 +116,7 @@ const ChangeAccountDataForm = () => {
           errors={errors}
           style={inputStyle}
         />
-        <InputOrderForm
+        <CustomInput
           register={register}
           type="text"
           name="address"

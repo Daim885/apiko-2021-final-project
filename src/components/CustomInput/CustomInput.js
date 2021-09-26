@@ -5,9 +5,9 @@ import { handlerHelperText } from "../../config/utils";
 import { ReactComponent as OpenEye } from "../../icons/icon_show_eye.svg";
 import { ReactComponent as CloseEye } from "../../icons/icon_hidden_eye.svg";
 
-import "./InputOrderForm.css";
+import "./CustomInput.css";
 
-const InputOrderForm = (props) => {
+const CustomInput = (props) => {
   const {
     register,
     type,
@@ -69,4 +69,4 @@ const InputOrderForm = (props) => {
   );
 };
 
-export default InputOrderForm;
+export default CustomInput;

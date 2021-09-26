@@ -9,7 +9,7 @@ import Api from "../../classApi/classApi";
 import { passwordHelperText } from "../../config/constants/constants";
 import { setDataAfterLogIn } from "../../store";
 
-import InputOrderForm from "../InputOrderForm/InputOrderForm";
+import CustomInput from "../CustomInput/CustomInput";
 
 import { ReactComponent as CloseIcon } from "../../icons/icon_close.svg";
 
@@ -68,7 +68,7 @@ const Register = (props) => {
         <div className="register-title">Register</div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="register-fields">
-            <InputOrderForm
+            <CustomInput
               register={register}
               type="text"
               name="fullName"
@@ -76,7 +76,7 @@ const Register = (props) => {
               errors={errors}
               style={inputStyle}
             />
-            <InputOrderForm
+            <CustomInput
               register={register}
               type="email"
               name="email"
@@ -84,7 +84,7 @@ const Register = (props) => {
               errors={errors}
               style={inputStyle}
             />
-            <InputOrderForm
+            <CustomInput
               register={register}
               type="tel"
               name="phone"
@@ -92,7 +92,7 @@ const Register = (props) => {
               errors={errors}
               style={inputStyle}
             />
-            <InputOrderForm
+            <CustomInput
               register={register}
               type="password"
               name="password"

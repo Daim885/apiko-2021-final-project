@@ -9,7 +9,7 @@ import Api from "../../classApi/classApi";
 import { setDataAfterLogIn } from "../../store";
 import { passwordHelperText } from "../../config/constants";
 
-import InputOrderForm from "../InputOrderForm/InputOrderForm";
+import CustomInput from "../CustomInput/CustomInput";
 
 import { ReactComponent as CloseIcon } from "../../icons/icon_close.svg";
 
@@ -70,7 +70,7 @@ const LogIn = (props) => {
         <div className="login-title">Login</div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="login-fields">
-            <InputOrderForm
+            <CustomInput
               register={register}
               type="email"
               name="email"
@@ -79,7 +79,7 @@ const LogIn = (props) => {
               clearErrors={clearErrors}
               style={{ width: 362 }}
             />
-            <InputOrderForm
+            <CustomInput
               register={register}
               type="password"
               name="password"
