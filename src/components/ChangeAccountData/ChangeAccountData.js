@@ -8,7 +8,7 @@ import { userDataSelector, changeUserData } from "../../store";
 import { changeAccountDataSchema } from "../../config/yupSchemes";
 import { messageChangeAccountData } from "../../config/constants";
 
-import MessageAddItemToCart from "../MessageAddItemToCart/MessageAddItemToCart";
+import PopUpMessage from "../PopUpMessage/PopUpMessage";
 import CustomInput from "../CustomInput/CustomInput";
 
 import "./ChangeAccountData.css";
@@ -67,7 +67,7 @@ const ChangeAccountDataForm = () => {
     <>
       <span className="account-change__text">Main information</span>
       {showMessage && (
-        <MessageAddItemToCart
+        <PopUpMessage
           closeMessage={() => setShowMessage(false)}
           message={messageChangeAccountData}
         />

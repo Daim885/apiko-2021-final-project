@@ -16,7 +16,7 @@ import SingleProduct from "../SingleProduct/SingleProduct";
 import SelectAuthorization from "../SelectAuthorization/SelectAuthorization";
 import Register from "../Register/Register";
 import LogIn from "../LogIn/LogIn";
-import MessageAddItemToCart from "../MessageAddItemToCart/MessageAddItemToCart";
+import PopUpMessage from "../PopUpMessage/PopUpMessage";
 
 import { ReactComponent as EmptyHeartIcon } from "../../icons/icon_empty_heart.svg";
 
@@ -27,7 +27,6 @@ const ListItem = ({ item }) => {
   const [isFavorite, setIsFavorite] = useState(item.favorite);
   const [showMessage, setShowMessage] = useState(false);
   const isToken = !!useSelector(tokenSelector);
-  // Якщо процес додання нового елементу в масив у стейті можна спростити, то як???
   const cart = useSelector(cartSelector);
   const location = useLocation();
   const dispatch = useDispatch();
@@ -86,7 +85,7 @@ const ListItem = ({ item }) => {
   return (
     <>
       {showMessage && (
-        <MessageAddItemToCart
+        <PopUpMessage
           itemName={item.title}
           closeMessage={() => setShowMessage(false)}
         />
