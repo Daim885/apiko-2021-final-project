@@ -19,6 +19,8 @@ const ListProduct = () => {
       if (location.pathname === "/products/search") setTypeMessage("byName");
       else if (location.pathname.startsWith("/categories/"))
         setTypeMessage("byCategory");
+      else if (location.pathname === "/favorites")
+        setTypeMessage("byFavorites");
       else setTypeMessage("");
     }
   }, [products, location.pathname]);
@@ -46,6 +48,14 @@ const ListProduct = () => {
           <span className="message-error__title">
             No items in this category yet
           </span>
+        </div>
+      )}
+      {typeMessage === "byFavorites" && (
+        <div
+          className="message-error-product-list"
+          style={{ display: "block" }}
+        >
+          <span className="message-error__title">No items in favorites</span>
         </div>
       )}
     </>
