@@ -76,14 +76,6 @@ const Register = (props) => {
               errors={errors}
               style={inputStyle}
             />
-            {/* register={register}
-              type="password"
-              name="password"
-              placeholder="Password"
-              errors={errors}
-              clearErrors={clearErrors}
-              helperText={passwordHelperText}
-              style={{ width: 362, marginTop: 25 }} */}
             <InputOrderForm
               register={register}
               type="email"

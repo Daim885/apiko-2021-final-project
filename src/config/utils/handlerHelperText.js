@@ -1,10 +1,14 @@
+import { passwordHelperText } from "../constants";
+
 export const handlerHelperText = (name, errors, helperText) => {
   const typeError = errors[name]?.type;
   switch (typeError) {
     case "required":
       return "Required info is missing";
-    case "matches":
-      return "Incorrect data";
+    case "matches": {
+      if (name === "password") return passwordHelperText;
+      else return "Incorrect data";
+    }
     case "email":
       return "Incorrect data";
     case "emailUsed":
