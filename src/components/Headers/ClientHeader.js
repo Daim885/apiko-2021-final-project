@@ -11,7 +11,7 @@ import {
   cartSelector,
 } from "../../store";
 
-import { initialsUser } from "../../config/utils";
+import { initialsUser, createGreeting } from "../../config/utils";
 
 import Preloader from "../Preloader/Preloader";
 
@@ -38,7 +38,7 @@ const ClientHeader = () => {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fullName = userData?.fullName;
-  const greeting = `Welcome, ${fullName?.slice(fullName.lastIndexOf(" "))}!`;
+  const greeting = createGreeting(fullName);
   const initials = initialsUser(fullName);
 
   const logOut = () => {
