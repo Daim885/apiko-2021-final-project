@@ -8,7 +8,7 @@ import Api from "../../classApi/classApi";
 import { orderSchema } from "../../config/yupSchemes";
 import { cartSelector, userDataSelector, refreshCart } from "../../store";
 
-import InputOrderForm from "../../components/InputOrderForm/InputOrderForm";
+import CustomInput from "../../components/CustomInput/CustomInput";
 import CartItem from "../../components/CartItem/CartItem";
 import Modal from "../../components/Modal/Modal";
 import ChoiceAfterOrder from "../../components/ChoiceAfterOrder/ChoiceAfterOrder";
@@ -96,14 +96,14 @@ const CartPage = () => {
           )}
         </div>
         <form className="cart-form" onSubmit={handleSubmit(onSubmit)}>
-          <InputOrderForm
+          <CustomInput
             register={register}
             name="fullName"
             placeholder="Full Name"
             errors={errors}
             style={inputStyle}
           />
-          <InputOrderForm
+          <CustomInput
             register={register}
             name="phone"
             placeholder="Phone"
@@ -125,14 +125,14 @@ const CartPage = () => {
               </option>
             ))}
           </select>
-          <InputOrderForm
+          <CustomInput
             register={register}
             name="city"
             placeholder="City"
             errors={errors}
             style={inputStyle}
           />
-          <InputOrderForm
+          <CustomInput
             register={register}
             name="address"
             placeholder="Address"

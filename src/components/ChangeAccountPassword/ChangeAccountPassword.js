@@ -6,8 +6,8 @@ import Api from "../../classApi/classApi";
 import { changeAccountPasswordSchema } from "../../config/yupSchemes";
 import { messageChangePassword } from "../../config/constants";
 
-import MessageAddItemToCart from "../MessageAddItemToCart/MessageAddItemToCart";
-import InputOrderForm from "../InputOrderForm/InputOrderForm";
+import PopUpMessage from "../PopUpMessage/PopUpMessage";
+import CustomInput from "../CustomInput/CustomInput";
 
 import "./ChangeAccountPassword.css";
 
@@ -51,7 +51,7 @@ const ChangeAccountPassword = () => {
     <>
       <span className="account-change__text">Change password</span>
       {showMessage && (
-        <MessageAddItemToCart
+        <PopUpMessage
           closeMessage={() => setShowMessage(false)}
           message={messageChangePassword}
         />
@@ -60,7 +60,7 @@ const ChangeAccountPassword = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="account-change-password-form"
       >
-        <InputOrderForm
+        <CustomInput
           register={register}
           name="oldPassword"
           type="password"
@@ -68,7 +68,7 @@ const ChangeAccountPassword = () => {
           errors={errors}
           style={inputStyle}
         />
-        <InputOrderForm
+        <CustomInput
           register={register}
           name="newPassword"
           type="password"
@@ -76,7 +76,7 @@ const ChangeAccountPassword = () => {
           errors={errors}
           style={inputStyle}
         />
-        <InputOrderForm
+        <CustomInput
           register={register}
           name="newPasswordConfirm"
           type="password"

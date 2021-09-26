@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 
 import { ReactComponent as CloseIcon } from "../../icons/icon_close.svg";
 
-import "./MessageAddItemToCart.css";
+import "./PopUpMessage.css";
 
-const MessageAddItemToCart = (props) => {
+const PopUpMessage = (props) => {
   const { itemName = "", closeMessage, message } = props;
 
   useEffect(() => {
@@ -30,4 +30,4 @@ const MessageAddItemToCart = (props) => {
   );
 };
 
-export default MessageAddItemToCart;
+export default PopUpMessage;
